@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | BIG MEDIA EVENT</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="about.css" />
 </head>
 <body>
@@ -11,28 +12,28 @@
   <!-- NAV -->
   <header class="navbar">
     <div class="nav-container">
-      <div class="logo">
+      <a href="index.html" class="logo">
         <span class="logo-big">BIG</span>
         <span class="logo-media">MEDIA</span>
         <span class="logo-event">EVENT</span>
-      </div>
+      </a>
       <nav class="nav-links">
-        <a href="#">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html" class="active">About</a>
-        <a href="#">Services</a>
+        <a href="services.html">Services</a>
         <a href="#">Gallery</a>
-        <a href="#">Contact</a>
+        <a href="#" class="nav-cta">Get a Quote</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="mobile-menu" id="mobileMenu">
-      <a href="#">Home</a>
+      <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
-      <a href="#">Services</a>
+      <a href="services.html">Services</a>
       <a href="#">Gallery</a>
-      <a href="#">Contact</a>
+      <a href="#">Get a Quote</a>
     </div>
   </header>
 
@@ -56,7 +57,7 @@
   <section class="story section">
     <div class="container grid-2">
       <div class="story-visual" data-animate>
-        <div class="screen-mockup">
+        <div class="screen-mockup" style="width:280px;height:190px">
           <div class="screen-inner">
             <div class="screen-glow"></div>
             <div class="screen-lines">
@@ -273,23 +274,26 @@
     <div class="container cta-inner" data-animate>
       <h2>Ready to Make Your Event<br />Bigger Than Ever?</h2>
       <p>Get in touch today and let's build the perfect LED screen setup for your event.</p>
-      <a href="#" class="btn-primary">Request a Quote</a>
+      <div class="cta-buttons">
+        <a href="#" class="btn-primary">Request a Quote</a>
+        <a href="services.html" class="btn-outline">View Services</a>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="logo">
+      <a href="index.html" class="logo" style="justify-content:center;margin-bottom:10px">
         <span class="logo-big">BIG</span>
         <span class="logo-media">MEDIA</span>
         <span class="logo-event">EVENT</span>
-      </div>
+      </a>
       <p class="footer-tagline">LED Screen Rental — Indoor & Outdoor</p>
       <div class="footer-links">
-        <a href="#">Home</a>
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="#">Services</a>
+        <a href="services.html">Services</a>
         <a href="#">Gallery</a>
         <a href="#">Contact</a>
       </div>
@@ -297,6 +301,6 @@
     </div>
   </footer>
 
-  <script src="about.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

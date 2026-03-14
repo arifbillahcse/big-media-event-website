@@ -1,0 +1,268 @@
+/* ============================================================
+   SERVICES.CSS — Services page specific styles
+   BIG MEDIA EVENT
+============================================================ */
+
+/* =============================
+   SERVICE TAB NAV
+============================= */
+.svc-nav {
+  background: var(--clr-surface);
+  border-bottom: 1px solid var(--clr-border);
+  position: sticky;
+  top: 72px;
+  z-index: 100;
+}
+
+.svc-tabs {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.svc-tabs::-webkit-scrollbar { display: none; }
+
+.svc-tab {
+  flex-shrink: 0;
+  padding: 18px 28px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--clr-muted);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  transition: color var(--transition), border-color var(--transition);
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+.svc-tab:hover { color: var(--clr-primary); }
+.svc-tab.active {
+  color: var(--clr-primary);
+  border-bottom-color: var(--clr-primary);
+}
+
+/* =============================
+   SERVICE SECTIONS
+============================= */
+.svc-section { background: var(--clr-bg); }
+.svc-section.alt-bg { background: var(--clr-surface); }
+
+.svc-block { /* inherits .grid-2 from style.css */ }
+
+/* =============================
+   SERVICE VISUAL
+============================= */
+.svc-screen-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.svc-badge {
+  position: absolute;
+  background: var(--clr-card);
+  border: 1px solid var(--clr-border);
+  border-radius: 10px;
+  padding: 10px 16px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+.svc-badge strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--clr-primary);
+}
+.svc-badge span {
+  font-size: 0.72rem;
+  color: var(--clr-muted);
+  white-space: nowrap;
+}
+
+/* =============================
+   SERVICE INFO
+============================= */
+.svc-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+.events-tag       { background: rgba(245,166,35,0.12);  color: var(--clr-primary); }
+.meetings-tag     { background: rgba(99,179,237,0.12);  color: #63b3ed; }
+.sports-tag       { background: rgba(72,187,120,0.12);  color: #48bb78; }
+.conferences-tag  { background: rgba(159,122,234,0.12); color: #9f7aea; }
+.exhibitions-tag  { background: rgba(245,166,35,0.12);  color: var(--clr-accent); }
+
+.svc-info h2 { margin-bottom: 16px; }
+
+.svc-info > p {
+  color: var(--clr-muted);
+  margin-bottom: 28px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.svc-features {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  margin-bottom: 28px;
+}
+.svc-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--clr-text);
+  font-size: 0.9rem;
+}
+.feat-icon {
+  flex-shrink: 0;
+  color: var(--clr-primary);
+  font-weight: 900;
+}
+
+.svc-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.svc-types span {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--clr-border);
+  border-radius: 50px;
+  padding: 5px 14px;
+  font-size: 0.78rem;
+  color: var(--clr-muted);
+}
+
+/* =============================
+   EQUIPMENT SPECS
+============================= */
+.specs { background: var(--clr-bg); }
+
+.section-sub {
+  color: var(--clr-muted);
+  max-width: 560px;
+  margin: 12px auto 0;
+  font-size: 1rem;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.spec-card {
+  background: var(--clr-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 36px 28px;
+  text-align: center;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.spec-card:hover {
+  border-color: var(--clr-primary);
+  transform: translateY(-6px);
+}
+
+.spec-icon { font-size: 2rem; margin-bottom: 14px; }
+
+.spec-card h4 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--clr-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.spec-value {
+  font-size: 1.4rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.spec-card > p { color: var(--clr-muted); font-size: 0.88rem; }
+
+/* =============================
+   PROCESS
+============================= */
+.process { background: var(--clr-surface); }
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.process-step {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.process-num {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(245,166,35,0.1);
+  border: 2px solid rgba(245,166,35,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 900;
+  background-clip: text;
+  color: var(--clr-primary);
+  letter-spacing: 0.05em;
+}
+
+.process-body { padding: 12px 0 0; }
+.process-body h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--clr-white);
+  margin-bottom: 8px;
+}
+.process-body p { color: var(--clr-muted); font-size: 0.92rem; padding-bottom: 8px; }
+
+.process-connector {
+  width: 2px;
+  height: 48px;
+  background: linear-gradient(180deg, rgba(245,166,35,0.3), rgba(245,166,35,0.05));
+  margin-left: 29px;
+}
+
+/* =============================
+   RESPONSIVE
+============================= */
+@media (max-width: 1024px) {
+  .specs-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .svc-tab { padding: 14px 18px; font-size: 0.8rem; }
+  .svc-features { grid-template-columns: 1fr; }
+  .specs-grid { grid-template-columns: repeat(2, 1fr); }
+  .svc-screen-wrap { min-height: 220px; }
+}
+
+@media (max-width: 480px) {
+  .specs-grid { grid-template-columns: 1fr; }
+}
