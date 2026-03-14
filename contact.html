@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | BIG MEDIA EVENT — Demander un Devis</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-big">BIG</span>
+        <span class="logo-media">MEDIA</span>
+        <span class="logo-event">EVENT</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À Propos</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Galerie</a>
+        <a href="contact.html" class="nav-cta active">Demander un Devis</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Accueil</a>
+      <a href="about.html">À Propos</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Galerie</a>
+      <a href="contact.html" class="active">Demander un Devis</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="container page-hero-content" data-animate>
+      <p class="section-eyebrow">Contactez-Nous</p>
+      <h1>Parlons de<br /><span>Votre Événement</span></h1>
+      <p>Obtenez un devis personnalisé gratuit sous 24 heures — sans engagement, juste un excellent service.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- FORMULAIRE -->
+        <div class="contact-form-wrap" data-animate>
+          <h2>Demander un Devis Gratuit</h2>
+          <p class="form-sub">Remplissez le formulaire ci-dessous et notre équipe vous contactera sous 24 heures avec un devis personnalisé.</p>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">Prénom <span class="req">*</span></label>
+                <input type="text" id="firstName" name="firstName" placeholder="Votre prénom" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Nom <span class="req">*</span></label>
+                <input type="text" id="lastName" name="lastName" placeholder="Votre nom" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" placeholder="vous@exemple.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Entreprise / Organisation</label>
+              <input type="text" id="company" name="company" placeholder="Nom de votre entreprise" />
+            </div>
+
+            <div class="form-group">
+              <label for="eventType">Type d'Événement <span class="req">*</span></label>
+              <select id="eventType" name="eventType" required>
+                <option value="" disabled selected>Sélectionnez le type d'événement</option>
+                <option value="event">Événement (Concert, Gala, Lancement)</option>
+                <option value="meeting">Réunion (Conseil, AG, Formation)</option>
+                <option value="sport">Sport (Tournoi, Match, Marathon)</option>
+                <option value="conference">Conférence (Sommet, Séminaire, Forum)</option>
+                <option value="exhibition">Exposition (Salon, Expo, Showroom)</option>
+                <option value="other">Autre</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="eventDate">Date de l'Événement</label>
+                <input type="date" id="eventDate" name="eventDate" />
+              </div>
+              <div class="form-group">
+                <label for="location">Lieu / Ville</label>
+                <input type="text" id="location" name="location" placeholder="Ville ou nom du lieu" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="setup">Installation Souhaitée</label>
+              <select id="setup" name="setup">
+                <option value="" disabled selected>Sélectionnez le type d'installation</option>
+                <option value="indoor">Intérieur</option>
+                <option value="outdoor">Extérieur</option>
+                <option value="both">Intérieur &amp; Extérieur</option>
+                <option value="unsure">Je ne sais pas encore</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Détails Supplémentaires</label>
+              <textarea id="message" name="message" rows="5" placeholder="Décrivez votre événement, la taille du public estimée, les dimensions d'écran souhaitées, ou toute autre information utile..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary btn-submit">
+              <span class="btn-text">Envoyer la Demande</span>
+              <span class="btn-loading" style="display:none">Envoi en cours...</span>
+            </button>
+          </form>
+
+          <!-- Message de succès -->
+          <div class="form-success" id="formSuccess" style="display:none">
+            <div class="success-icon">✓</div>
+            <h3>Demande Envoyée !</h3>
+            <p>Merci pour votre demande. Notre équipe vous contactera sous 24 heures avec un devis personnalisé.</p>
+          </div>
+        </div>
+
+        <!-- INFOS CONTACT -->
+        <div class="contact-info" data-animate>
+
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <h4>Adresse</h4>
+            <p>BIG MEDIA EVENT<br />Casablanca, Maroc</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">📞</div>
+            <h4>Téléphone</h4>
+            <p>+212 5XX-XXXXXX</p>
+            <span class="info-note">Disponible du lundi au samedi, 9h - 18h</span>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">✉️</div>
+            <h4>Email</h4>
+            <p>contact@bigmediaevent.com</p>
+            <span class="info-note">Réponse sous 24 heures</span>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">🕐</div>
+            <h4>Heures d'Ouverture</h4>
+            <p>Lundi – Samedi : 9h00 – 18h00</p>
+            <span class="info-note">Support événement 24/7 disponible</span>
+          </div>
+
+          <!-- AVANTAGES -->
+          <div class="info-highlights">
+            <h4>Pourquoi Nous Contacter ?</h4>
+            <ul>
+              <li><span class="check">✓</span> Devis gratuit sous 24 heures</li>
+              <li><span class="check">✓</span> Aucun engagement</li>
+              <li><span class="check">✓</span> Conseil personnalisé gratuit</li>
+              <li><span class="check">✓</span> Service clé en main inclus</li>
+              <li><span class="check">✓</span> Support technique sur site</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section">
+    <div class="container">
+      <div class="section-header" data-animate>
+        <p class="section-eyebrow">Questions Fréquentes</p>
+        <h2>Tout Ce Que Vous Devez Savoir</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item" data-animate>
+          <button class="faq-question">
+            <span>Quel est le délai minimum pour réserver un écran LED ?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Nous recommandons de réserver au moins 2 semaines à l'avance pour garantir la disponibilité. Pour les événements urgents, contactez-nous — nous ferons notre maximum pour vous aider.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-animate>
+          <button class="faq-question">
+            <span>L'installation et le démontage sont-ils inclus dans le prix ?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Oui, notre service est clé en main. La livraison, l'installation, le test, le support pendant l'événement et le démontage sont tous inclus dans nos forfaits.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-animate>
+          <button class="faq-question">
+            <span>Quelles tailles d'écran proposez-vous ?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Nos écrans vont de 3 m² pour les petites salles de réunion à plus de 200 m² pour les grandes installations de stade. Nous pouvons créer des configurations sur mesure selon vos besoins.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-animate>
+          <button class="faq-question">
+            <span>Vos écrans fonctionnent-ils en extérieur par tous les temps ?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Oui, nos écrans extérieurs sont certifiés IP65, entièrement étanches et ultra-lumineux (jusqu'à 5 000 nits). Ils fonctionnent parfaitement sous la pluie et en plein soleil.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-animate>
+          <button class="faq-question">
+            <span>Quels types de contenu puis-je afficher sur les écrans ?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Vous pouvez afficher des vidéos, des présentations, des flux en direct, des tableaux de score, des animations, de la signalétique et tout contenu numérique. Nous vous accompagnons aussi sur les formats et résolutions.</p>
+          </div>
+        </div>
+        <div class="faq-item" data-animate>
+          <button class="faq-question">
+            <span>Proposez-vous des forfaits multi-jours ?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Absolument ! Nous proposons des forfaits à l'heure, à la journée et sur plusieurs jours. Plus la durée de location est longue, plus les tarifs sont avantageux. Contactez-nous pour un devis personnalisé.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta section">
+    <div class="cta-bg"></div>
+    <div class="container cta-inner" data-animate>
+      <h2>Prêt à Voir Grand ?</h2>
+      <p>Parlez-nous de votre événement et recevez un devis personnalisé gratuit sous 24 heures.</p>
+      <div class="cta-buttons">
+        <a href="tel:+212500000000" class="btn-primary">Appelez-Nous</a>
+        <a href="services.html" class="btn-outline">Explorer les Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="index.html" class="logo" style="justify-content:center;margin-bottom:10px">
+        <span class="logo-big">BIG</span>
+        <span class="logo-media">MEDIA</span>
+        <span class="logo-event">EVENT</span>
+      </a>
+      <p class="footer-tagline">Location d'Écrans LED — Intérieur & Extérieur</p>
+      <div class="footer-links">
+        <a href="index.html">Accueil</a>
+        <a href="about.html">À Propos</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 BIG MEDIA EVENT. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>
